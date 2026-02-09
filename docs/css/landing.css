@@ -152,6 +152,10 @@
   align-items: start;
 }
 
+.step > * {
+  grid-column: 2;
+}
+
 .step::before {
   content: attr(data-number);
   position: relative;
@@ -166,6 +170,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   flex-shrink: 0;
+  grid-column: 1;
   grid-row: 1 / -1;
 }
 
