@@ -145,21 +145,21 @@
   background-color: var(--dark-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-lg) var(--spacing-2xl);
+  padding: 3rem 2rem 2rem 5rem;
   position: relative;
-  min-height: 200px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .step::before {
   content: attr(data-number);
   position: absolute;
-  left: var(--spacing-lg);
-  top: var(--spacing-lg);
-  width: 40px;
-  height: 40px;
+  left: 1.5rem;
+  top: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--primary);
   color: var(--dark-bg);
   border-radius: 50%;
@@ -167,7 +167,8 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .step h3 {

@@ -1,9 +1,10 @@
 /* 데모 페이지 스타일 */
 
 #demo-page {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 #demo-page main {
@@ -11,8 +12,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-xl) var(--spacing-lg) 6rem var(--spacing-lg);
+  justify-content: flex-start;
+  padding: var(--spacing-lg);
+  overflow-y: auto;
+  gap: var(--spacing-lg);
 }
 
 #demo-page header {
@@ -38,7 +41,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
+  margin-top: var(--spacing-lg);
 }
 
 .game-container {
