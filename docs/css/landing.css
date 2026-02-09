@@ -145,9 +145,12 @@
   background-color: var(--dark-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-lg) var(--spacing-2xl);
   position: relative;
-  padding-left: var(--spacing-2xl);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .step::before {
