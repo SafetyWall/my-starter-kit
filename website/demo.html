@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Game Starter Kit - 라이브 게임 데모" />
+    <title>라이브 데모 - Game Starter Kit</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body id="demo-page">
+    <!-- 헤더 -->
+    <header>
+      <nav class="container">
+        <a href="index.html">← 랜딩 페이지로</a>
+        <h1>🎮 라이브 데모</h1>
+      </nav>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+      <div class="game-wrapper">
+        <!-- 게임 로딩 상태 -->
+        <div class="game-loading">게임을 로드 중입니다</div>
+
+        <!-- 게임 컨테이너 -->
+        <div class="game-container">
+          <iframe
+            src="game/index.html"
+            title="Game Demo"
+            allow="fullscreen"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- 컨트롤 가이드 -->
+        <div class="controls-guide">
+          <h3>🕹️ 컨트롤</h3>
+          <ul>
+            <li>
+              <span class="key-label">← → / A D</span>
+              플레이어 이동
+            </li>
+            <li>
+              <span class="key-label">SPACE / W</span>
+              점프
+            </li>
+            <li>
+              <span class="key-label">ESC</span>
+              메뉴로 돌아가기
+            </li>
+          </ul>
+
+          <h3 style="margin-top: var(--spacing-lg)">📋 게임 흐름</h3>
+          <ul style="margin-top: var(--spacing-md)">
+            <li>
+              <strong style="color: var(--primary)">Boot Scene</strong>
+              - 게임 초기화 및 에셋 로딩
+            </li>
+            <li>
+              <strong style="color: var(--primary)">Main Menu Scene</strong>
+              - 시작 버튼으로 게임 시작
+            </li>
+            <li>
+              <strong style="color: var(--primary)">Game Scene</strong>
+              - 플레이어를 조작하여 게임 진행
+            </li>
+          </ul>
+        </div>
+
+        <!-- 돌아가기 버튼 -->
+        <a href="index.html" class="btn btn-primary btn-back">
+          ← 랜딩 페이지로 돌아가기
+        </a>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer style="margin-top: var(--spacing-2xl)">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">홈</a>
+          <a href="https://github.com/anthropics/phaser-starter">GitHub</a>
+          <a href="https://phaser.io">Phaser 문서</a>
+        </div>
+        <div class="copyright">© 2024 Game Starter Kit. MIT License</div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

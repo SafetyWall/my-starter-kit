@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Phaser + TypeScript + Vite로 빠르게 웹 게임을 개발할 수 있는 스타터킷"
+    />
+    <title>웹 게임 스타터킷 - Game Starter Kit</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+
+    <style>
+      nav .active {
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+        padding-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <nav class="container">
+        <h1>🎮 Game Starter Kit</h1>
+        <div style="display: flex; gap: 2rem">
+          <a href="#features">특징</a>
+          <a href="#quickstart">시작하기</a>
+          <a href="#demo">데모</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero 섹션 -->
+      <section id="hero">
+        <div class="hero-content">
+          <h1>웹 게임 스타터킷</h1>
+          <p>
+            Phaser + TypeScript + Vite로 빠른 프로토타입 개발<br />
+            최소한의 설정으로 게임 개발을 시작하세요
+          </p>
+          <div class="hero-cta">
+            <a href="demo.html" class="btn btn-primary">🎮 라이브 데모 보기</a>
+            <a href="https://github.com/anthropics/phaser-starter" class="btn btn-secondary"
+              >⭐ GitHub에서 보기</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Features 섹션 -->
+      <section id="features">
+        <div class="container">
+          <h2>주요 특징</h2>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="icon">🎮</div>
+              <h3>Phaser 3.85.0</h3>
+              <p>강력하고 유연한 2D 게임 엔진으로 브라우저에서 바로 게임을 만들 수 있습니다</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="icon">📘</div>
+              <h3>TypeScript 5.x</h3>
+              <p>타입 안전성으로 버그를 줄이고 더 안정적인 코드를 작성할 수 있습니다</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="icon">⚡</div>
+              <h3>Vite 5.x</h3>
+              <p>초고속 개발 서버와 즉시 모듈 갱신(HMR)으로 개발 생산성을 극대화합니다</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="icon">🏗️</div>
+              <h3>Scene 기반</h3>
+              <p>확장 가능한 아키텍처로 복잡한 게임도 쉽게 구조화할 수 있습니다</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Start 섹션 -->
+      <section id="quickstart">
+        <div class="container">
+          <h2>빠른 시작</h2>
+
+          <div class="steps">
+            <div class="step" data-number="1">
+              <h3>의존성 설치</h3>
+              <p>프로젝트 디렉토리에서 다음 명령어를 실행합니다:</p>
+              <div class="code-block">
+                <code>pnpm install</code>
+              </div>
+              <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem">
+                💡 npm을 사용하는 경우 npm install을 사용하세요
+              </p>
+            </div>
+
+            <div class="step" data-number="2">
+              <h3>개발 서버 실행</h3>
+              <p>코드를 수정하면 자동으로 새로고침됩니다:</p>
+              <div class="code-block">
+                <code>pnpm dev</code>
+              </div>
+              <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem">
+                브라우저에서 http://localhost:3000 으로 열립니다
+              </p>
+            </div>
+
+            <div class="step" data-number="3">
+              <h3>프로덕션 빌드</h3>
+              <p>최적화된 빌드를 생성하여 배포합니다:</p>
+              <div class="code-block">
+                <code>pnpm build</code>
+              </div>
+              <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem">
+                dist/ 디렉토리에 빌드 파일이 생성됩니다
+              </p>
+            </div>
+          </div>
+
+          <div style="background-color: var(--dark-bg); border: 1px solid var(--border); border-radius: 8px; padding: var(--spacing-lg); margin-top: var(--spacing-2xl); text-align: center">
+            <h3 style="color: var(--secondary); margin-top: 0">추가 명령어</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-lg)">
+              <div>
+                <strong>코드 린팅</strong>
+                <div class="code-block" style="margin: 0.5rem 0 0 0">
+                  <code>pnpm lint</code>
+                </div>
+              </div>
+              <div>
+                <strong>코드 포맷팅</strong>
+                <div class="code-block" style="margin: 0.5rem 0 0 0">
+                  <code>pnpm format</code>
+                </div>
+              </div>
+              <div>
+                <strong>빌드 미리보기</strong>
+                <div class="code-block" style="margin: 0.5rem 0 0 0">
+                  <code>pnpm preview</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demo 섹션 -->
+      <section id="demo">
+        <div class="container">
+          <h2>게임 데모</h2>
+
+          <div class="demo-content">
+            <div class="demo-text">
+              <h3>지금 플레이해보세요</h3>
+              <p>오른쪽의 게임을 직접 플레이할 수 있습니다. 간단한 플랫폼 게임으로 스타터킷의 기본 기능을 보여줍니다.</p>
+
+              <h4 style="color: var(--text); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md)">
+                컨트롤
+              </h4>
+              <ul class="demo-list">
+                <li>방향키 또는 <span style="font-family: var(--font-mono)">WASD</span> - 이동</li>
+                <li>스페이스 또는 <span style="font-family: var(--font-mono)">W</span> - 점프</li>
+                <li><span style="font-family: var(--font-mono)">ESC</span> - 메뉴로</li>
+              </ul>
+
+              <h4 style="color: var(--text); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md)">
+                게임 흐름
+              </h4>
+              <ul class="demo-list">
+                <li><strong style="color: var(--primary)">BootScene</strong> - 에셋 로딩</li>
+                <li><strong style="color: var(--primary)">MainMenuScene</strong> - 메뉴 화면</li>
+                <li><strong style="color: var(--primary)">GameScene</strong> - 메인 게임</li>
+              </ul>
+
+              <a href="demo.html" class="btn btn-primary" style="display: inline-block; margin-top: var(--spacing-lg)">
+                풀 화면 데모 열기 →
+              </a>
+            </div>
+
+            <div class="demo-visual">
+              <div
+                style="
+                  width: 100%;
+                  max-width: 400px;
+                  margin: 0 auto;
+                  background: linear-gradient(135deg, var(--section-bg) 0%, var(--dark-bg) 100%);
+                  border: 2px dashed var(--border);
+                  border-radius: 8px;
+                  padding: var(--spacing-lg);
+                  text-align: center;
+                "
+              >
+                <div style="font-size: 3rem; margin-bottom: var(--spacing-md)">🎮</div>
+                <p style="color: var(--text-muted); margin: 0 0 var(--spacing-md) 0">
+                  게임 프리뷰
+                </p>
+                <a href="demo.html" class="btn btn-primary" style="width: 100%">
+                  데모 플레이하기
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Deep Dive -->
+      <section style="background-color: var(--section-bg)">
+        <div class="container">
+          <h2>왜 이 스타터킷을 선택할까?</h2>
+
+          <div class="grid grid-cols-1" style="margin-top: var(--spacing-2xl); gap: var(--spacing-xl)">
+            <div class="card">
+              <h3>⚙️ 설정 최소화</h3>
+              <p>복잡한 설정 없이 바로 게임 개발에 집중하세요. TypeScript, Vite, ESLint가 미리 구성되어 있습니다.</p>
+            </div>
+
+            <div class="card">
+              <h3>📈 확장 가능한 구조</h3>
+              <p>Scene 기반의 아키텍처로 게임이 복잡해져도 코드를 체계적으로 관리할 수 있습니다.</p>
+            </div>
+
+            <div class="card">
+              <h3>🚀 빠른 개발</h3>
+              <p>Vite의 HMR로 코드를 수정하면 즉시 반영됩니다. 개발 중 브라우저 새로고침이 필요 없습니다.</p>
+            </div>
+
+            <div class="card">
+              <h3>📚 명확한 예제</h3>
+              <p>Player 엔티티, Scene 관리 등 실제로 사용할 수 있는 코드 예제가 포함되어 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://github.com/anthropics/phaser-starter">GitHub</a>
+          <a href="https://phaser.io">Phaser 공식</a>
+          <a href="https://www.typescriptlang.org">TypeScript</a>
+          <a href="https://vitejs.dev">Vite</a>
+        </div>
+        <div class="copyright">© 2024 Game Starter Kit. MIT License</div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

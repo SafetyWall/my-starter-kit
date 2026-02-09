@@ -1,0 +1,211 @@
+/* 데모 페이지 스타일 */
+
+#demo-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#demo-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+#demo-page header {
+  position: relative;
+  z-index: 1001;
+}
+
+#demo-page nav {
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+#demo-page nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-right: auto;
+}
+
+/* 게임 컨테이너 */
+.game-wrapper {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.game-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--section-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.game-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  display: block !important;
+}
+
+/* 컨트롤 가이드 */
+.controls-guide {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.controls-guide h3 {
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.controls-guide ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.controls-guide li {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+.controls-guide li::before {
+  content: '→';
+  color: var(--secondary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.key-label {
+  background-color: var(--code-bg);
+  color: var(--secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* 돌아가기 버튼 */
+.btn-back {
+  display: inline-block;
+  margin-top: var(--spacing-lg);
+}
+
+/* 로딩 상태 */
+.game-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.game-loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: var(--spacing-md);
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  #demo-page main {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .game-wrapper {
+    max-width: 100%;
+  }
+
+  .game-container {
+    max-width: 100%;
+  }
+
+  .controls-guide {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    aspect-ratio: auto;
+    height: 450px;
+  }
+
+  .controls-guide {
+    padding: var(--spacing-md);
+  }
+
+  .controls-guide h3 {
+    font-size: 1.25rem;
+  }
+
+  .controls-guide li {
+    font-size: 0.9rem;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  #demo-page main {
+    padding: var(--spacing-md);
+  }
+
+  .game-container {
+    height: 300px;
+  }
+
+  .controls-guide {
+    padding: var(--spacing-md);
+    font-size: 0.85rem;
+  }
+
+  .controls-guide li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .key-label {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .btn-back {
+    width: 100%;
+    text-align: center;
+  }
+}
